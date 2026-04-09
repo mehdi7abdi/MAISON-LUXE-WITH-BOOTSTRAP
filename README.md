@@ -14,7 +14,7 @@ MAISON LUXE est une boutique en ligne élégante et moderne, conçue pour mettre
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/mehdi7abdi/Online-Store.git
+git clone https://github.com/mehdi7abdi/MAISON-LUXE-WITH-BOOTSTRAP.git
 cd Online-Store
 
 ```
