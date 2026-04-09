@@ -1,0 +1,133 @@
+/* hero.css — Section Hero
+   La grille 2 colonnes est gérée par Bootstrap (row/col) dans le HTML.
+   Ce fichier gère uniquement le visuel.
+*/
+
+.hero {
+  background: var(--bg);
+  padding: 2rem 0;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Contenu texte ── */
+.hero-content { animation: fadeInUp 1s ease both; }
+
+.hero-title {
+  font-family: var(--font-title);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 300;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+.hero-title em { font-style: italic; color: var(--accent); }
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 440px;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.hero-cta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Stats */
+.hero-stats {
+  display: flex;
+  gap: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(13,16,67,.15);
+  flex-wrap: wrap;
+}
+.stat-number {
+  display: block;
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--text);
+}
+
+/* ── Galerie photos ── */
+.hero-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  animation: fadeIn 1s ease 0.3s both;
+  position: relative;
+}
+.hero-gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+}
+
+/* ── Carte flottante ── */
+.hero-card {
+  position: absolute;
+  top: 78px; left: -300px;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: var(--shadow-lg);
+  animation: float 3s ease-in-out infinite;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+.hero-card:hover { background: var(--text); color: var(--bg); }
+.hero-card span  { font-size: 1.5rem; }
+.hero-card p     { font-weight: 500; margin: 0; }
+.hero-card small { color: var(--accent); font-size: 0.75rem; }
+
+/* ── Animations ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Tablette ≤ 1024px ── */
+@media (max-width: 1024px) {
+  .hero-card { display: none; }
+  .hero-stats { padding-top: 0; }
+}
+
+/* ── Mobile ≤ 768px ── */
+@media (max-width: 768px) {
+  .hero { min-height: auto; padding: 4rem 0; }
+  .hero-content { text-align: center; }
+  .hero-cta   { justify-content: center; }
+  .hero-stats { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .hero-title  { font-size: 2.5rem; }
+  .hero-stats  { flex-direction: column; align-items: center; gap: 1.5rem; }
+  .hero-cta    { flex-direction: column; align-items: center; }
+}

@@ -1,0 +1,145 @@
+/* products.css — Section Produits
+   La grille est gérée par Bootstrap (row + col-*).
+   On override les classes Bootstrap .card, .card-body, .card-footer.
+*/
+
+.products {
+  padding: 4rem 0;
+  background: var(--bg);
+  animation: fadeInUp 1s ease both;
+}
+
+.products-more { text-align: center; }
+
+/* ── Carte — override Bootstrap .card ── */
+.card {
+  background: var(--surface) !important;
+  border-radius: var(--radius-md) !important;
+  border: 1px solid rgba(13,16,67,.12) !important;
+  box-shadow: var(--shadow) !important;
+  position: relative;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition) !important;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg) !important;
+}
+
+/* Badge */
+.card-badge {
+  position: absolute;
+  top: 14px; left: 14px;
+  z-index: 2;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  border-radius: 99px;
+  background: #2d6a4f;
+  color: #fff;
+}
+.card-badge--hot  { background: #c0392b; }
+.card-badge--sale { background: var(--accent); }
+
+/* Zone image — NE PAS confondre avec .card-img-top Bootstrap */
+.card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 0 !important;
+}
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform var(--transition);
+}
+.card:hover .card-img img { transform: scale(1.04); }
+
+/* Wishlist */
+.card-wish {
+  position: absolute;
+  top: 12px; right: 12px;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,.85);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-muted);
+  transition: color var(--transition), transform var(--transition);
+}
+.card-wish:hover { color: #e05; transform: scale(1.12); }
+
+/* Corps — override Bootstrap .card-body */
+.card-body {
+  padding: 1.25rem !important;
+  display: flex !important;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+.card-cat {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  margin: 0;
+}
+.card-name {
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0;
+}
+.card-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  flex: 1;
+  margin: 0;
+}
+
+/* Pied — override Bootstrap .card-footer */
+.card-footer {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 0.75rem 0 0 !important;
+  border-top: 1px solid rgba(13,16,67,.1) !important;
+  background: transparent !important;
+  flex-wrap: wrap;
+}
+.price {
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+.price-old {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  margin-left: 0.3rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .card-footer { flex-direction: column; align-items: flex-start; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

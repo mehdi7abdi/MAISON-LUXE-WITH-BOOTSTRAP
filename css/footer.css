@@ -1,0 +1,109 @@
+/* footer.css — Footer
+   La grille 4 colonnes est gérée par Bootstrap (row/col) dans le HTML.
+*/
+
+.footer {
+  background: var(--border);
+  color: rgba(255,255,255,.7);
+  padding: 4rem 0 1.5rem;
+}
+
+.footer-top {
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  margin-bottom: 2rem;
+}
+
+.footer-logo {
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  color: #fff !important;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+.footer-logo span { color: var(--accent); }
+
+.footer-col p {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+/* Réseaux sociaux */
+.footer-social { display: flex; gap: 0.6rem; }
+
+.social-link {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; font-weight: 600;
+  color: rgba(255,255,255,.7) !important;
+  transition: background var(--transition), border-color var(--transition);
+}
+.social-link:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff !important;
+}
+
+/* Titres colonnes */
+.footer-heading {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-list a {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,.6) !important;
+  transition: color var(--transition);
+}
+.footer-list a:hover { color: var(--accent-light) !important; }
+
+/* Newsletter */
+.footer-newsletter { display: flex; gap: 0.5rem; }
+.footer-newsletter input {
+  flex: 1;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.9rem;
+  color: #fff;
+  outline: none;
+  transition: border-color var(--transition);
+  box-shadow: none;
+}
+.footer-newsletter input::placeholder { color: rgba(255,255,255,.35); }
+.footer-newsletter input:focus { border-color: var(--accent); }
+
+/* Bas */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,.4);
+}
+.footer-legal { display: flex; gap: 1.25rem; }
+.footer-legal a {
+  color: rgba(255,255,255,.4) !important;
+  transition: color var(--transition);
+}
+.footer-legal a:hover { color: rgba(255,255,255,.8) !important; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+@media (max-width: 480px) {
+  .footer-newsletter { flex-direction: column; }
+}

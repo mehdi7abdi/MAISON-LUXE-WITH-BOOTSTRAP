@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAISON LUXE — Boutique en ligne</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Custom -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/root.css" />
+    <link rel="stylesheet" href="css/icons.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/About.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
+  <body>
+    <!-- ==============================
+         HEADER
+    ================================ -->
+    <header class="header">
+      <div class="promo">
+        Livraison gratuite dès 80 € — Code promo : <strong>BIENVENUE10</strong>
+      </div>
+
+      <nav class="nav">
+        <a href="#accueil" class="nav-logo">MAISON<span>LUXE</span></a>
+
+        <!-- Checkbox -->
+        <input type="checkbox" id="navToggle" class="nav-checkbox" />
+        <label for="navToggle" class="nav-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </label>
+
+        <ul class="nav-links">
+          <li><a href="#accueil" class="nav-link">Accueil</a></li>
+          <li><a href="#produits" class="nav-link">Produits</a></li>
+          <li><a href="#apropos" class="nav-link">À propos</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-icons">
+          <button class="icon-btn" aria-label="Rechercher">
+            <span class="search"></span>
+          </button>
+          <button class="icon-btn" aria-label="Panier">
+            <span class="market"></span>
+            <span class="cart-badge">2</span>
+          </button>
+        </div>
+
+        <div class="nav-overlay"></div>
+      </nav>
+    </header>
+
+    <!-- ==============================
+         HERO
+    ================================ -->
+    <section class="hero" id="accueil">
+      <div class="container" style="max-width: var(--max-width)">
+        <div class="row align-items-center g-5">
+          <!-- Texte gauche -->
+          <div class="col-12 col-lg-6">
+            <div class="hero-content">
+              <p class="eyebrow">Nouvelle Collection 2025</p>
+              <h1 class="hero-title">L'Élégance<br /><em>Redéfinie</em></h1>
+              <p class="hero-subtitle">
+                Des pièces sélectionnées avec soin pour sublimer votre
+                quotidien. Qualité premium, livraison rapide.
+              </p>
+              <div class="hero-cta">
+                <a href="#produits" class="btn btn-primary"
+                  >Découvrir la collection</a
+                >
+                <a href="#apropos" class="btn btn-ghost"
+                  >Notre histoire <span class="arrow-bottom"></span
+                ></a>
+              </div>
+              <div class="hero-stats">
+                <div>
+                  <span class="stat-number">2 400+</span>
+                  <span class="stat-label">Clients satisfaits</span>
+                </div>
+                <div>
+                  <span class="stat-number">150+</span>
+                  <span class="stat-label">Produits exclusifs</span>
+                </div>
+                <div>
+                  <span class="stat-number">4.9★</span>
+                  <span class="stat-label">Note moyenne</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Galerie droite (cachée mobile via Bootstrap) -->
+          <div class="col-lg-6 d-none d-lg-block">
+            <div class="hero-gallery">
+              <img src="img/sac.webp" alt="Sac cuir" />
+              <img src="img/montre.webp" alt="Montre" />
+              <img src="img/parfum.webp" alt="Parfum" />
+              <img src="img/foulard.jpg" alt="Foulard" />
+              <div class="hero-card">
+                <span>🛍</span>
+                <div>
+                  <p>Commande expédiée</p>
+                  <small>Livraison en 24 h</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         PRODUITS
+    ================================ -->
+    <section class="products" id="produits">
+      <div class="container" style="max-width: var(--max-width)">
+        <div class="section-header">
+          <p class="eyebrow">Notre sélection</p>
+          <h2>Produits Phares</h2>
+          <p class="section-subtitle">
+            Chaque article est choisi pour sa qualité et son originalité.
+          </p>
+        </div>
+
+        <!-- Bootstrap gère la grille responsive des cartes -->
+        <div class="row g-4 mb-5">
+          <div class="col-12 col-sm-6 col-xl-3">
+            <article class="card h-100">
+              <span class="card-badge">Nouveau</span>
+              <div class="card-img">
+                <img src="img/sac.webp" alt="Sac Cuir Vachette" />
+              </div>
+              <button class="card-wish">♡</button>
+              <div class="card-body">
+                <p class="card-cat">Maroquinerie</p>
+                <h3 class="card-name">Sac Cuir Vachette</h3>
+                <p class="card-desc">
+                  Confectionné en cuir pleine fleur, ce sac allie élégance
+                  discrète et fonctionnalité au quotidien.
+                </p>
+                <div class="card-footer">
+                  <div>
+                    <span class="price">189 €</span>
+                    <span class="price-old">230 €</span>
+                  </div>
+                  <button class="btn btn-primary btn-sm">Acheter</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-sm-6 col-xl-3">
+            <article class="card h-100">
+              <span class="card-badge card-badge--hot">Tendance</span>
+              <div class="card-img">
+                <img src="img/montre.webp" alt="Montre Minimaliste" />
+              </div>
+              <button class="card-wish">♡</button>
+              <div class="card-body">
+                <p class="card-cat">Horlogerie</p>
+                <h3 class="card-name">Montre Minimaliste</h3>
+                <p class="card-desc">
+                  Cadran épuré, boîtier en acier inoxydable et bracelet en nappa
+                  — l'accessoire parfait pour toutes occasions.
+                </p>
+                <div class="card-footer">
+                  <div><span class="price">320 €</span></div>
+                  <button class="btn btn-primary btn-sm">Acheter</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-sm-6 col-xl-3">
+            <article class="card h-100">
+              <span class="card-badge card-badge--sale">−20 %</span>
+              <div class="card-img">
+                <img src="img/parfum.webp" alt="Parfum Signature" />
+              </div>
+              <button class="card-wish">♡</button>
+              <div class="card-body">
+                <p class="card-cat">Parfumerie</p>
+                <h3 class="card-name">Parfum Signature</h3>
+                <p class="card-desc">
+                  Un sillage boisé-floral aux notes de bergamote, rose de Damas
+                  et cèdre. Élixir de raffinement absolu.
+                </p>
+                <div class="card-footer">
+                  <div>
+                    <span class="price">96 €</span>
+                    <span class="price-old">120 €</span>
+                  </div>
+                  <button class="btn btn-primary btn-sm">Acheter</button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-sm-6 col-xl-3">
+            <article class="card h-100">
+              <div class="card-img">
+                <img src="img/foulard.jpg" alt="Foulard en Soie" />
+              </div>
+              <button class="card-wish">♡</button>
+              <div class="card-body">
+                <p class="card-cat">Accessoires</p>
+                <h3 class="card-name">Foulard en Soie</h3>
+                <p class="card-desc">
+                  Tissé en 100 % soie naturelle, ce foulard aux motifs
+                  géométriques s'invite autour du cou ou de la poignée.
+                </p>
+                <div class="card-footer">
+                  <div><span class="price">75 €</span></div>
+                  <button class="btn btn-primary btn-sm">Acheter</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="products-more">
+          <a href="#" class="btn btn-outline">Voir toute la collection</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         À PROPOS
+    ================================ -->
+    <section class="about" id="apropos">
+      <div class="container" style="max-width: var(--max-width)">
+        <div class="row align-items-center g-5">
+          <!-- Texte -->
+          <div class="col-12 col-lg-6">
+            <p class="eyebrow">Notre histoire</p>
+            <h2>Artisanat &amp; Passion</h2>
+            <p class="about-desc">
+              Fondée en 2018, <strong>MAISON LUXE</strong> sélectionne des
+              créateurs indépendants partout en Europe pour vous proposer des
+              articles d'exception.
+            </p>
+            <ul class="about-values">
+              <li>
+                <span>✦</span>
+                <div>
+                  <strong>Qualité irréprochable</strong>
+                  <p>
+                    Matières premières sourcées de manière éthique et durable.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>✦</span>
+                <div>
+                  <strong>Service personnalisé</strong>
+                  <p>Conseils sur mesure par nos stylistes dédiés.</p>
+                </div>
+              </li>
+              <li>
+                <span>✦</span>
+                <div>
+                  <strong>Retours gratuits</strong>
+                  <p>30 jours pour changer d'avis, sans conditions.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Citation -->
+          <div class="col-12 col-lg-6 d-flex justify-content-center">
+            <p class="about-quote">
+              "Le luxe, c'est l'attention portée aux détails."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         CONTACT
+    ================================ -->
+    <section class="contact" id="contact">
+      <div class="container" style="max-width: var(--max-width)">
+        <div class="section-header">
+          <p class="eyebrow">Nous écrire</p>
+          <h2>Contactez-nous</h2>
+        </div>
+
+        <div class="row g-5 align-items-start">
+          <!-- Formulaire -->
+          <div class="col-12 col-lg-7">
+            <form class="contact-form" novalidate>
+              <div class="field">
+                <label for="name">Nom complet</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Marie Dupont"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="email">Adresse e-mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="marie@exemple.fr"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  rows="5"
+                  placeholder="Votre message…"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Envoyer le message
+              </button>
+            </form>
+          </div>
+
+          <!-- Infos -->
+          <div class="col-12 col-lg-5">
+            <div class="contact-info">
+              <div class="info-item">
+                <span>📍</span>
+                <div>
+                  <strong>Adresse</strong>
+                  <p>Lot N°3, Chem. de Val d'Hydra, El Biar 16016</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <span>📞</span>
+                <div>
+                  <strong>Téléphone</strong>
+                  <p>+213 5 55 05 50 66</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <span>✉️</span>
+                <div>
+                  <strong>E-mail</strong>
+                  <p>mehdihca@outlook.fr</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <span>🕐</span>
+                <div>
+                  <strong>Horaires</strong>
+                  <p>Lun – Sam : 10 h – 19 h</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         FOOTER
+    ================================ -->
+    <footer class="footer">
+      <div class="container" style="max-width: var(--max-width)">
+        <div class="row g-4 footer-top">
+          <!-- Logo + Social -->
+          <div class="col-12 col-sm-6 col-lg-4 footer-col">
+            <a href="#accueil" class="footer-logo">MAISON<span>LUXE</span></a>
+            <p>
+              L'élégance à portée de clic.<br />Livraison dans toute l'Europe.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-link">In</a>
+              <a href="#" class="social-link">Pi</a>
+              <a href="#" class="social-link">Fb</a>
+            </div>
+          </div>
+
+          <!-- Boutique -->
+          <div class="col-6 col-sm-3 col-lg-2 footer-col">
+            <h3 class="footer-heading">Boutique</h3>
+            <ul class="footer-list">
+              <li><a href="#produits">Nouveautés</a></li>
+              <li><a href="#produits">Meilleures ventes</a></li>
+              <li><a href="#produits">Promotions</a></li>
+              <li><a href="#produits">Coffrets cadeaux</a></li>
+            </ul>
+          </div>
+
+          <!-- Aide -->
+          <div class="col-6 col-sm-3 col-lg-2 footer-col">
+            <h3 class="footer-heading">Aide</h3>
+            <ul class="footer-list">
+              <li><a href="#contact">FAQ</a></li>
+              <li><a href="#contact">Suivi de commande</a></li>
+              <li><a href="#contact">Retours &amp; échanges</a></li>
+              <li><a href="#contact">Service client</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="col-12 col-lg-4 footer-col">
+            <h3 class="footer-heading">Newsletter</h3>
+            <p>Recevez nos offres exclusives en avant-première.</p>
+            <form class="footer-newsletter" novalidate>
+              <input type="email" placeholder="Votre e-mail" />
+              <button type="submit" class="btn btn-primary btn-sm">OK</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © 2026 MAISON LUXE — Tous droits réservés. Developed by mehdi.dev
+          </p>
+          <div class="footer-legal">
+            <a href="#">Mentions légales</a>
+            <a href="#">CGV</a>
+            <a href="#">Confidentialité</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

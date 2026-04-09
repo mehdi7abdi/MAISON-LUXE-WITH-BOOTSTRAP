@@ -1,0 +1,20 @@
+/* reset.css — surcharges Bootstrap */
+
+/* Bootstrap a son propre reset (Reboot), on garde juste l'essentiel */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body) !important;
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+  line-height: 1.65 !important;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+
+ul { list-style: none; padding-left: 0; margin-bottom: 0; }
+
+/* Bootstrap force color sur les <a> — on remet le nôtre */
+a { color: inherit !important; text-decoration: none !important; }
+a:hover { color: var(--accent) !important; }
